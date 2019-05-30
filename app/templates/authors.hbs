@@ -1,0 +1,20 @@
+<body>
+    <div>
+        <h1>
+            AUTHORS
+        </h1>
+    </div>
+
+
+ 
+    <ul>
+
+        {{#each model as |author|}}
+            <li>
+                {{author.name}}
+            </li>
+        {{/each}}
+    </ul>
+
+</body>
+{{outlet}}

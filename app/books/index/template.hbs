@@ -1,0 +1,25 @@
+
+<div class='container'>
+    <div class="md-col-12">
+        <nav class="navbar-header">
+            BOOKS
+        </nav>
+    </div>
+    <div class ='row'>
+        <ul class="list-group">
+
+            {{#each model as |book|}}
+                <li>
+                    {{#link-to "books.book" book}} 
+                        <div class="col-sm">
+                
+                            {{book.title}}
+                        </div>       
+                    {{/link-to}}
+                </li>   
+                {{book-details book=bookUnit}} 
+                
+            {{/each}}
+        </ul>
+    </div>
+</div>
