@@ -1,0 +1,35 @@
+
+<div class="bs-container">
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            {{#link-to "aboutus" tagName="button"}}
+            About Us
+            {{/link-to}}
+            {{#link-to "cart" tagName="button"}}
+            cart
+            {{/link-to}}
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </nav>
+        <h1 class="bs-page-header">
+            BOOKS
+        </h1>
+    </div>
+    <div class ="row">
+        <ul class="list-group">
+
+            {{#each model as |book|}}
+                <li class="list-group-item">
+                    {{#link-to "books.book" book}} 
+                        <div>
+                                {{book.title}}
+                        </div>       
+                    {{/link-to}}
+                </li>   
+            {{/each}}
+        </ul>
+    </div>
+
+</div>
